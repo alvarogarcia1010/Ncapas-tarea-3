@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Ingresar</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="card mt-2">
+      <div th:if="${!errores.isEmpty()}" class="card-body">
+        <h1>Validacion</h1>
+        <ul class="list-group">
+				  <li class="list-group-item" th:each="e : ${errores}" th:text="${e}"/>
+				</ul>
+      </div>
+      <div th:unless="${!errores.isEmpty()}" class="card-body">
+        <h1>Alumno ingresado con exito</h1>
+        <a class="btn btn-primary" th:href="@{/ingresar}">Ingresar</a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

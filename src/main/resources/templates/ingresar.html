@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Ingresar</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="card mt-2">
+      <div class="card-body">
+        <h1>Ingreso de nuevo alumno</h1>
+        <form th:action="@{/validacion}"  method="post"> 
+          <div class="form-group">
+            <label for="names">Nombres</label>
+            <input type="text" class="form-control form-control-sm" id="names" name="names">
+          </div>
+          <div class="form-group">
+            <label for="surnames">Apellidos</label>
+            <input type="text" class="form-control form-control-sm" id="surnames" name="surnames">
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Fecha de nacimiento</label>
+            <input type="date" class="form-control form-control-sm" id="birthdate" name="birthdate">
+          </div>
+          <div class="form-group">
+            <label for="birthplace">Lugar de nacimiento</label>
+            <input type="text" class="form-control form-control-sm" id="birthplace" name="birthplace">
+          </div>
+          <div class="form-group">
+            <label for="institute">Instituto o Colegio de procedencia</label>
+            <input type="text" class="form-control form-control-sm" id="institute" name="institute">
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Telefono fijo</label>
+            <input type="text" class="form-control form-control-sm" id="phoneNumber" name="phoneNumber">
+          </div>
+          <div class="form-group">
+            <label for="mobilePhoneNumber">Telefono movil</label>
+            <input type="text" class="form-control form-control-sm" id="mobilePhoneNumber" name="mobilePhoneNumber">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
